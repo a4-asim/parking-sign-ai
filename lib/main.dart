@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'camera_screen.dart';
 
 void main() {
   runApp(ParkingApp());
@@ -26,6 +27,10 @@ class HomeScreen extends StatelessWidget {
   child: ElevatedButton(
     onPressed: () {
       print("Scan button pressed");
+      Navigator.push(
+    context,
+    MaterialPageRoute(builder: (_) => CameraScreen()),
+  );
     },
     child: Text("Scan Parking Sign 📷"),
   ),
